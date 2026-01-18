@@ -8,5 +8,15 @@
         "lat": 54.333,
         "lng": 18.936,
         "video": "https://www.youtube.com/watch?v=1OYmuUuoKNQ"
+    },
+    {
+        "id": 2,
+        "title": "Gdańsk - Sylwester 2025",
+        "place": "ul. Porębskiego, Gdańsk",
+        "description": "Lot dronem na Sylwestra nad ul. Porębskiego w Gdańsku",
+        "date": "2025-12-31",
+        "lat": 54.3193,
+        "lng": 18.5786,
+        "video": "https://youtu.be/fHDLioz3xqk"
     }
 ]
