@@ -31,6 +31,16 @@
     },
     {
         "id": 4,
+        "title": "Most kolejowy w Tczewie",
+        "place": "Tczew, most kolejowy nad Wisłą",
+        "description": "Lot dronem nad zabytkowym mostem kolejowym w Tczewie",
+        "date": "2025-12-29",
+        "lat": 54.093,
+        "lng": 18.819,
+        "video": "https://youtu.be/oYuIPxc316g"
+    },
+    {
+        "id": 5,
         "title": "Henrykowo - Warmia",
         "place": "Henrykowo, gm. Orneta",
         "description": "Lot dronem nad Henrykowem koło Ornety",
@@ -40,7 +50,7 @@
         "video": "https://youtu.be/B6TWK4SKy1Y"
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "Plaża w Kolbudach",
         "place": "Kolbudy, Jezioro Bielkowskie",
         "description": "Lot dronem nad plażą i kąpieliskiem gminnym w Kolbudach",
