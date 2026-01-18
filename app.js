@@ -1,5 +1,5 @@
 // Initialize map centered on Europe
-const map = L.map('map').setView([52.0, 10.0], 5);
+const map = L.map('map').setView([52.0, 19.0], 6);
 
 // Add dark tile layer (CartoDB Dark Matter)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
