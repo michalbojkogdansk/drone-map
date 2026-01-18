@@ -18,5 +18,15 @@
         "lat": 54.3193,
         "lng": 18.5786,
         "video": "https://youtu.be/fHDLioz3xqk"
+    },
+    {
+        "id": 3,
+        "title": "Górki Zachodnie - Wigilia 2025",
+        "place": "Górki Zachodnie, Gdańsk",
+        "description": "Lot dronem w Wigilię nad Górkami Zachodnimi",
+        "date": "2025-12-24",
+        "lat": 54.368,
+        "lng": 18.771,
+        "video": "https://youtu.be/uvLSSp2X2jg"
     }
 ]
