@@ -28,5 +28,15 @@
         "lat": 54.368,
         "lng": 18.771,
         "video": "https://youtu.be/uvLSSp2X2jg"
+    },
+    {
+        "id": 4,
+        "title": "Henrykowo - Warmia",
+        "place": "Henrykowo, gm. Orneta",
+        "description": "Lot dronem nad Henrykowem koło Ornety",
+        "date": "2025-12-07",
+        "lat": 54.177,
+        "lng": 20.158,
+        "video": "https://youtu.be/B6TWK4SKy1Y"
     }
 ]
