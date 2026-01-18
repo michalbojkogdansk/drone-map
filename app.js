@@ -1,4 +1,4 @@
-// Initialize map centered on Europe
+// Initialize map centered on Poland
 const map = L.map('map').setView([52.0, 19.0], 6);
 
 // Add dark tile layer (CartoDB Dark Matter)
@@ -24,6 +24,17 @@ const modalDate = document.getElementById('modal-date');
 const modalLocation = document.getElementById('modal-location');
 const modalVideoContainer = document.getElementById('modal-video-container');
 const closeBtn = document.querySelector('.close-btn');
+
+// Panel elements
+const locationsList = document.getElementById('locations-list');
+const showMoreBtn = document.getElementById('show-more-btn');
+const showLessBtn = document.getElementById('show-less-btn');
+
+// State
+let allLocations = [];
+let markers = {};
+let showingAll = false;
+const INITIAL_DISPLAY = 10;
 
 // Extract YouTube video ID from various URL formats
 function getYouTubeId(url) {
@@ -82,12 +93,67 @@ function openVideo(location) {
 // Make openVideo available globally for popup buttons
 window.openVideo = openVideo;
 
+// Format date for display
+function formatDate(dateStr) {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('pl-PL', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+// Render locations list
+function renderLocationsList(showAll = false) {
+    const locationsToShow = showAll ? allLocations : allLocations.slice(0, INITIAL_DISPLAY);
+    
+    locationsList.innerHTML = '';
+    
+    locationsToShow.forEach(loc => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <div class="loc-title">${loc.title}</div>
+            <div class="loc-date">${formatDate(loc.date)}</div>
+        `;
+        li.onclick = () => {
+            map.setView([loc.lat, loc.lng], 12);
+            markers[loc.id].openPopup();
+        };
+        locationsList.appendChild(li);
+    });
+    
+    // Update buttons visibility
+    if (allLocations.length > INITIAL_DISPLAY) {
+        if (showAll) {
+            showMoreBtn.style.display = 'none';
+            showLessBtn.style.display = 'block';
+        } else {
+            showMoreBtn.style.display = 'block';
+            showLessBtn.style.display = 'none';
+        }
+    } else {
+        showMoreBtn.style.display = 'none';
+        showLessBtn.style.display = 'none';
+    }
+}
+
+// Button handlers
+showMoreBtn.onclick = () => {
+    showingAll = true;
+    renderLocationsList(true);
+};
+
+showLessBtn.onclick = () => {
+    showingAll = false;
+    renderLocationsList(false);
+};
+
 // Load locations and add markers
 fetch('locations.json')
     .then(response => response.json())
     .then(locations => {
-        locations.forEach(loc => {
+        // Sort by date (newest first)
+        allLocations = locations.sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        allLocations.forEach(loc => {
             const marker = L.marker([loc.lat, loc.lng], { icon: droneIcon }).addTo(map);
+            markers[loc.id] = marker;
             
             // Create popup content
             const popupContent = `
@@ -103,7 +169,10 @@ fetch('locations.json')
             marker.bindPopup(popupContent);
         });
         
-        console.log(`Loaded ${locations.length} drone locations`);
+        // Render list panel
+        renderLocationsList(false);
+        
+        console.log(`Loaded ${allLocations.length} drone locations`);
     })
     .catch(error => {
         console.error('Error loading locations:', error);
