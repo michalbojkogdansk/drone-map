@@ -38,5 +38,15 @@
         "lat": 54.177,
         "lng": 20.158,
         "video": "https://youtu.be/B6TWK4SKy1Y"
+    },
+    {
+        "id": 5,
+        "title": "Plaża w Kolbudach",
+        "place": "Kolbudy, Jezioro Bielkowskie",
+        "description": "Lot dronem nad plażą i kąpieliskiem gminnym w Kolbudach",
+        "date": "2025-11-30",
+        "lat": 54.275,
+        "lng": 18.481,
+        "video": "https://youtu.be/g9EXeE9PIzk"
     }
 ]
