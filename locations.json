@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "Przykładowy lot - Gdańsk",
+        "place": "Gdańsk, Polska",
+        "description": "To jest przykładowa pinezka. Zamień link YouTube na swój film!",
+        "date": "2026-01-18",
+        "lat": 54.3520,
+        "lng": 18.6466,
+        "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+]
