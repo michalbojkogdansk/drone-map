@@ -68,5 +68,15 @@
         "lat": 54.4015,
         "lng": 18.6633,
         "video": "https://youtu.be/Xvn9JhBSGNE"
+    },
+    {
+        "id": 8,
+        "title": "Otomin i Kolbudy",
+        "place": "Otomin, gmina Kolbudy",
+        "description": "Lot dronem nad Otominem i okolicami Kolbud",
+        "date": "2026-01-06",
+        "lat": 54.3204,
+        "lng": 18.5049,
+        "video": "https://youtu.be/CpRXc7fzNbw"
     }
 ]
