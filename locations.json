@@ -58,5 +58,15 @@
         "lat": 54.275,
         "lng": 18.481,
         "video": "https://youtu.be/g9EXeE9PIzk"
+    },
+    {
+        "id": 7,
+        "title": "Nowy Port - Gdańsk",
+        "place": "Nowy Port, Gdańsk",
+        "description": "Lot dronem nad dzielnicą Nowy Port w Gdańsku",
+        "date": "2025-12-20",
+        "lat": 54.4015,
+        "lng": 18.6633,
+        "video": "https://youtu.be/Xvn9JhBSGNE"
     }
 ]
