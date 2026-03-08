@@ -78,5 +78,15 @@
         "lat": 54.3204,
         "lng": 18.5049,
         "video": "https://youtu.be/CpRXc7fzNbw"
+    },
+    {
+        "id": 9,
+        "title": "Pieniężno - Warmia",
+        "place": "Pieniężno, pow. braniewski",
+        "description": "Lot dronem nad Pieniężnem niedaleko Ornety",
+        "date": "2026-03-08",
+        "lat": 54.236,
+        "lng": 20.129,
+        "video": "https://youtu.be/QAhMg58BExE"
     }
 ]
