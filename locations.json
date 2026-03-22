@@ -88,5 +88,15 @@
         "lat": 54.236,
         "lng": 20.129,
         "video": "https://youtu.be/QAhMg58BExE"
+    },
+    {
+        "id": 10,
+        "title": "Młyński Wiadukt w Rozłazinie",
+        "place": "Rozłazino, pow. lęborski",
+        "description": "Lot dronem nad zabytkowym Młyńskim Wiaduktem w Rozłazinie",
+        "date": "2026-03-22",
+        "lat": 54.532,
+        "lng": 17.864,
+        "video": "https://youtu.be/9Iw-2tGrvTk"
     }
 ]
