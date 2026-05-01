@@ -98,5 +98,15 @@
         "lat": 54.532,
         "lng": 17.864,
         "video": "https://youtu.be/9Iw-2tGrvTk"
+    },
+    {
+        "id": 11,
+        "title": "Pływające wyspy koło Rekowa",
+        "place": "Rekowo, pow. bytowski",
+        "description": "Lot dronem nad rezerwatem pływających wysp na Jeziorze Leniwym koło Rekowa",
+        "date": "2026-05-01",
+        "lat": 54.0836,
+        "lng": 17.4406,
+        "video": "https://youtu.be/STpKAHCQvyM"
     }
 ]
