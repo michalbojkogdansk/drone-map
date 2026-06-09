@@ -148,8 +148,8 @@ showLessBtn.onclick = () => {
 fetch('locations.json')
     .then(response => response.json())
     .then(locations => {
-        // Sort by id descending (newest added first)
-        allLocations = locations.sort((a, b) => b.id - a.id);
+        // Sort by date descending (newest first)
+        allLocations = locations.sort((a, b) => new Date(b.date) - new Date(a.date));
         
         allLocations.forEach(loc => {
             const marker = L.marker([loc.lat, loc.lng], { icon: droneIcon }).addTo(map);
