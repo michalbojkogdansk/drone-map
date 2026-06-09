@@ -108,5 +108,15 @@
         "lat": 54.0836,
         "lng": 17.4406,
         "video": "https://youtu.be/STpKAHCQvyM"
+    },
+    {
+        "id": 12,
+        "title": "Senja - Norwegia",
+        "place": "Senja, Norwegia",
+        "description": "Lot dronem nad wyspą Senja w północnej Norwegii",
+        "date": "2023-06-02",
+        "lat": 69.0806,
+        "lng": 16.8031,
+        "video": "https://youtu.be/C577Ih0q-6w"
     }
 ]
