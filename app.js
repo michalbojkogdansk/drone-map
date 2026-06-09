@@ -1,4 +1,4 @@
-// Initialize map centered on Poland
+// Initialize map (will fit bounds after loading pins)
 const map = L.map('map').setView([52.0, 19.0], 6);
 
 // Add dark tile layer (CartoDB Dark Matter)
@@ -151,9 +151,12 @@ fetch('locations.json')
         // Sort by date descending (newest first)
         allLocations = locations.sort((a, b) => new Date(b.date) - new Date(a.date));
         
+        const boundsGroup = L.featureGroup();
+        
         allLocations.forEach(loc => {
             const marker = L.marker([loc.lat, loc.lng], { icon: droneIcon }).addTo(map);
             markers[loc.id] = marker;
+            boundsGroup.addLayer(marker);
             
             // Create popup content
             const popupContent = `
@@ -168,6 +171,11 @@ fetch('locations.json')
             
             marker.bindPopup(popupContent);
         });
+        
+        // Fit map to show all pins with some padding
+        if (allLocations.length > 0) {
+            map.fitBounds(boundsGroup.getBounds(), { padding: [50, 50] });
+        }
         
         // Render list panel
         renderLocationsList(false);
